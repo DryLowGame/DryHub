@@ -31,7 +31,7 @@ local Open = Instance.new("TextButton")
 
 --Properties:
 
-ScreenGui.Parent = game.Workspace
+ScreenGui.Parent = game.CoreGui
 
 main.Name = "main"
 main.Parent = ScreenGui
