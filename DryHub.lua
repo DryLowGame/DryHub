@@ -1,23 +1,21 @@
--- Whitelist System
-local success = "LOADING DRYHUB"
-local fail = "Something went Wrong!"
-
-local whitelist = false
-local function Check(t,f)
-        if t == f then
-                return true
-        else
-                return false
-        end
+local success = "Loading Hub"
+local wrong = "Something went WRONG!"
+local ws = false
+local function checkws(t,f)
+	if t == f then
+		return true
+	else
+		return false
+	end
 end
 
-if Check(tostring("DryIsCool"), tostring(_G.Key)) then
-        whitelist = true
+if checkws(tostring("DryIsCool"), tostring(_G.Key)) then
+	ws = true
 else
-        print(fail)
+	print(wrong)
 end
 
-repeat wait() until whitelist
+repeat wait() until ws
 print(success)
 
 -- Instances:
@@ -29,10 +27,11 @@ local Name = Instance.new("TextLabel")
 local Print = Instance.new("TextButton")
 local CMDX = Instance.new("TextButton")
 local Close = Instance.new("TextButton")
+local Open = Instance.new("TextButton")
 
 --Properties:
 
-ScreenGui.Parent = game.CoreGui
+ScreenGui.Parent = game.Workspace
 
 main.Name = "main"
 main.Parent = ScreenGui
@@ -42,7 +41,8 @@ main.BorderSizePixel = 3
 main.Position = UDim2.new(0.22568807, 0, 0.20477137, 0)
 main.Size = UDim2.new(0, 517, 0, 263)
 main.Active = true
-main.Draggable = true
+main.Draggable = false
+
 
 _1stFloor.Name = "1st Floor"
 _1stFloor.Parent = main
@@ -76,9 +76,6 @@ Print.Font = Enum.Font.Roboto
 Print.Text = "Print Hi"
 Print.TextColor3 = Color3.fromRGB(85, 255, 127)
 Print.TextSize = 40.000
-Print.MouseButton1Down:connect(function()
-        print("Hi")
-end)
 
 CMDX.Name = "CMD-X"
 CMDX.Parent = _1stFloor
@@ -90,16 +87,50 @@ CMDX.Font = Enum.Font.Roboto
 CMDX.Text = "CMD-X"
 CMDX.TextColor3 = Color3.fromRGB(85, 255, 127)
 CMDX.TextSize = 40.000
-CMDX.MouseButton1Down:connect(function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source", true))()
-end)
 
 Close.Name = "Close"
-Close.Parent = ScreenGui
+Close.Parent = main
 Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Close.Position = UDim2.new(0.678899109, 0, 0.20477137, 0)
+Close.Position = UDim2.new(0.959363341, 0, -0.0157609358, 0)
 Close.Size = UDim2.new(0, 20, 0, 21)
 Close.Font = Enum.Font.SourceSans
 Close.Text = "X"
 Close.TextColor3 = Color3.fromRGB(0, 0, 0)
 Close.TextSize = 14.000
+
+Open.Name = "Open"
+Open.Parent = ScreenGui
+Open.BackgroundColor3 = Color3.fromRGB(45, 45, 54)
+Open.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Open.Position = UDim2.new(0, 0, 0.491053671, 0)
+Open.Size = UDim2.new(0, 107, 0, 50)
+Open.Font = Enum.Font.SourceSans
+Open.Text = "Open"
+Open.TextColor3 = Color3.fromRGB(255, 0, 0)
+Open.TextSize = 40.000
+
+-- Scripts:
+
+local function LUHIGIO_fake_script() -- Close.LocalScript 
+	local script = Instance.new('LocalScript', Close)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+	
+end
+coroutine.wrap(LUHIGIO_fake_script)()
+local function BYGN_fake_script() -- Open.LocalScript 
+	local script = Instance.new('LocalScript', Open)
+
+	local main = script.Parent.Parent.main  -- change “Test” to the name of the frane
+	local open = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if main.Visible == false then
+			main.Visible = true
+		end
+	end)
+	
+end
+coroutine.wrap(BYGN_fake_script)()
