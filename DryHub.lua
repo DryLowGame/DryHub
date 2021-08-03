@@ -1,4 +1,4 @@
---Version: 2.1.0
+--Version: 2.5.0
 
 -- Instances:
 
@@ -9,8 +9,8 @@ local DryHub = Instance.new("TextLabel")
 local BkHax = Instance.new("TextButton")
 local MheeHub = Instance.new("TextButton")
 local EvilHub = Instance.new("TextButton")
-local None6 = Instance.new("TextButton")
-local None5 = Instance.new("TextButton")
+local XenonHub = Instance.new("TextButton")
+local MammozHub = Instance.new("TextButton")
 local PolarHub = Instance.new("TextButton")
 local Close = Instance.new("TextButton")
 local UpdateLog = Instance.new("Frame")
@@ -41,7 +41,6 @@ main.BorderColor3 = Color3.fromRGB(255, 0, 0)
 main.BorderSizePixel = 3
 main.Position = UDim2.new(0.087155953, 0, 0.0674832314, 0)
 main.Size = UDim2.new(0, 517, 0, 263)
-main.Visible = false
 main.Active = true
 main.Draggable = true
 
@@ -112,29 +111,35 @@ EvilHub.MouseButton1Down:connect(function ()
 	loadstring(game:HttpGet(("https://raw.githubusercontent.com/Natthawat69/EvilHub-FREE/main/Script.lua"),true))()
 end)
 
-None6.Name = "None6"
-None6.Parent = _1stFloor
-None6.BackgroundColor3 = Color3.fromRGB(0, 85, 255)
-None6.BorderColor3 = Color3.fromRGB(85, 85, 255)
-None6.Position = UDim2.new(0.693769693, 0, 2.70731497, 0)
-None6.Size = UDim2.new(0, 146, 0, 70)
-None6.Font = Enum.Font.Roboto
-None6.Text = "None"
-None6.TextColor3 = Color3.fromRGB(85, 255, 127)
-None6.TextSize = 30.000
-None6.TextWrapped = true
+XenonHub.Name = "XenonHub"
+XenonHub.Parent = _1stFloor
+XenonHub.BackgroundColor3 = Color3.fromRGB(0, 85, 255)
+XenonHub.BorderColor3 = Color3.fromRGB(85, 85, 255)
+XenonHub.Position = UDim2.new(0.693769693, 0, 2.70731497, 0)
+XenonHub.Size = UDim2.new(0, 146, 0, 70)
+XenonHub.Font = Enum.Font.Roboto
+XenonHub.Text = "Xenon Hub"
+XenonHub.TextColor3 = Color3.fromRGB(85, 255, 127)
+XenonHub.TextSize = 30.000
+XenonHub.TextWrapped = true
+XenonHub.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet(("https://reaperking.xyz/bloxfruits"), true))()
+end)
 
-None5.Name = "None5"
-None5.Parent = _1stFloor
-None5.BackgroundColor3 = Color3.fromRGB(0, 85, 255)
-None5.BorderColor3 = Color3.fromRGB(85, 85, 255)
-None5.Position = UDim2.new(0.355217844, 0, 2.70731544, 0)
-None5.Size = UDim2.new(0, 146, 0, 70)
-None5.Font = Enum.Font.Roboto
-None5.Text = "None"
-None5.TextColor3 = Color3.fromRGB(85, 255, 127)
-None5.TextSize = 30.000
-None5.TextWrapped = true
+MammozHub.Name = "MammozHub"
+MammozHub.Parent = _1stFloor
+MammozHub.BackgroundColor3 = Color3.fromRGB(0, 85, 255)
+MammozHub.BorderColor3 = Color3.fromRGB(85, 85, 255)
+MammozHub.Position = UDim2.new(0.355217844, 0, 2.70731544, 0)
+MammozHub.Size = UDim2.new(0, 146, 0, 70)
+MammozHub.Font = Enum.Font.Roboto
+MammozHub.Text = "Mammoz Hub"
+MammozHub.TextColor3 = Color3.fromRGB(85, 255, 127)
+MammozHub.TextSize = 25.000
+MammozHub.TextWrapped = true
+MammozHub.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet(("https://pastebin.com/PcCaEqiB"), true))()
+end)
 
 PolarHub.Name = "Polar Hub"
 PolarHub.Parent = _1stFloor
@@ -251,6 +256,7 @@ Req.Parent = Display
 Req.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 Req.Position = UDim2.new(0.379816502, 0, 0.0616302192, 0)
 Req.Size = UDim2.new(0, 397, 0, 420)
+Req.Visible = false
 
 Pass.Name = "Pass"
 Pass.Parent = Req
@@ -311,7 +317,7 @@ Open.TextSize = 40.000
 
 -- Scripts:
 
-local function CQYWW_fake_script() -- Close.LocalScript 
+local function FQUNQD_fake_script() -- Close.LocalScript 
 	local script = Instance.new('LocalScript', Close)
 
 	local openbutton = script.Parent.Parent.Parent.openbutton.Open
@@ -321,8 +327,8 @@ local function CQYWW_fake_script() -- Close.LocalScript
 	end)
 	
 end
-coroutine.wrap(CQYWW_fake_script)()
-local function DSNHKE_fake_script() -- UpdateLog.LocalScript 
+coroutine.wrap(FQUNQD_fake_script)()
+local function YNOVAZ_fake_script() -- UpdateLog.LocalScript 
 	local script = Instance.new('LocalScript', UpdateLog)
 
 	
@@ -333,8 +339,8 @@ local function DSNHKE_fake_script() -- UpdateLog.LocalScript
 		updateLogFrame.Visible = false
 	end)
 end
-coroutine.wrap(DSNHKE_fake_script)()
-local function WKBX_fake_script() -- main.LocalScript 
+coroutine.wrap(YNOVAZ_fake_script)()
+local function NKUJIA_fake_script() -- main.LocalScript 
 	local script = Instance.new('LocalScript', main)
 
 	local updateLogButton = script.Parent.UpdateLogButton
@@ -345,8 +351,8 @@ local function WKBX_fake_script() -- main.LocalScript
 		updateLogFrame.Visible = true
 	end)
 end
-coroutine.wrap(WKBX_fake_script)()
-local function DXEV_fake_script() -- Login.LocalScript 
+coroutine.wrap(NKUJIA_fake_script)()
+local function CUUPL_fake_script() -- Login.LocalScript 
 	local script = Instance.new('LocalScript', Login)
 
 	local Key = script.Parent.Parent.Key
@@ -371,8 +377,8 @@ local function DXEV_fake_script() -- Login.LocalScript
 		end
 	end)
 end
-coroutine.wrap(DXEV_fake_script)()
-local function DBFJPU_fake_script() -- Open.LocalScript 
+coroutine.wrap(CUUPL_fake_script)()
+local function MEIZMF_fake_script() -- Open.LocalScript 
 	local script = Instance.new('LocalScript', Open)
 
 	local main = script.Parent.Parent.Parent.main	
@@ -385,4 +391,4 @@ local function DBFJPU_fake_script() -- Open.LocalScript
 	end)
 	
 end
-coroutine.wrap(DBFJPU_fake_script)()
+coroutine.wrap(MEIZMF_fake_script)()
