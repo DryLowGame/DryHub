@@ -1,43 +1,42 @@
 local ws = false
-local fail = "Something went wrong!"
-local success = "Loading DryHub"
-local function check(a,b)
+local s = "Loading DryHub"
+local f = "ERROR"
+local function c(a,b)
 	if a == b then
 		return true
 	else
-		return false	
+		return false
 	end
 end
 
-if check(tostring("DryIsCool"), tostring(_G.Key)) then
+if c(tostring("DryIsCool"), tostring(_G.Key)) then
 	ws = true
 else
-	print(fail)
+	print(f)
 end
 
 repeat wait() until ws
-print(success)
-
+print(s)
 -- Instances:
 
 local Display = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
 local _1stFloor = Instance.new("TextLabel")
-local Name = Instance.new("TextLabel")
+local DryHub = Instance.new("TextLabel")
 local BkHax = Instance.new("TextButton")
+local MheeHub = Instance.new("TextButton")
 local EvilHub = Instance.new("TextButton")
-local Aimbot = Instance.new("TextButton")
 local None6 = Instance.new("TextButton")
 local None5 = Instance.new("TextButton")
 local PolarHub = Instance.new("TextButton")
 local Close = Instance.new("TextButton")
 local UpdateLog = Instance.new("Frame")
-local Name_2 = Instance.new("TextLabel")
+local Name = Instance.new("TextLabel")
 local Close_2 = Instance.new("TextButton")
 local Upd1 = Instance.new("TextLabel")
 local Upd2 = Instance.new("TextLabel")
 local Credits = Instance.new("TextLabel")
-local version = Instance.new("TextLabel")
+local dversion = Instance.new("TextLabel")
 local UpdateLogButton = Instance.new("TextButton")
 local Open = Instance.new("TextButton")
 
@@ -55,7 +54,7 @@ main.Position = UDim2.new(0.22568807, 0, 0.20477137, 0)
 main.Size = UDim2.new(0, 517, 0, 263)
 main.Visible = false
 main.Active = true
-main.Driggable = true
+main.Draggable = true
 
 _1stFloor.Name = "1st Floor"
 _1stFloor.Parent = main
@@ -68,16 +67,16 @@ _1stFloor.Text = ""
 _1stFloor.TextColor3 = Color3.fromRGB(255, 255, 255)
 _1stFloor.TextSize = 14.000
 
-Name.Name = "Name"
-Name.Parent = _1stFloor
-Name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Name.BackgroundTransparency = 1.000
-Name.Position = UDim2.new(0.320939332, 0, 0.0923076943, 0)
-Name.Size = UDim2.new(0, 200, 0, 50)
-Name.Font = Enum.Font.SciFi
-Name.Text = "DryHub - v2.0.0a"
-Name.TextColor3 = Color3.fromRGB(255, 255, 255)
-Name.TextSize = 14.000
+DryHub.Name = "DryHub"
+DryHub.Parent = _1stFloor
+DryHub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DryHub.BackgroundTransparency = 1.000
+DryHub.Position = UDim2.new(0.320939332, 0, 0.0923076943, 0)
+DryHub.Size = UDim2.new(0, 200, 0, 50)
+DryHub.Font = Enum.Font.SciFi
+DryHub.Text = "DryHub - v2.0.0a"
+DryHub.TextColor3 = Color3.fromRGB(255, 255, 255)
+DryHub.TextSize = 14.000
 
 BkHax.Name = "BkHax"
 BkHax.Parent = _1stFloor
@@ -94,34 +93,34 @@ BkHax.MouseButton1Down:connect(function()
 	loadstring(game:HttpGet(("https://raw.githubusercontent.com/koonpeatch/PeatEX/master/BKHAX/BKHAXHUB"),true))()
 end)
 
-EvilHub.Name = "Evil Hub"
-EvilHub.Parent = _1stFloor
-EvilHub.BackgroundColor3 = Color3.fromRGB(0, 85, 255)
-EvilHub.BorderColor3 = Color3.fromRGB(85, 85, 255)
-EvilHub.Position = UDim2.new(0.695726633, 0, 1.23039222, 0)
-EvilHub.Size = UDim2.new(0, 146, 0, 70)
-EvilHub.Font = Enum.Font.Roboto
-EvilHub.Text = "Evil Hub"
-EvilHub.TextColor3 = Color3.fromRGB(85, 255, 127)
-EvilHub.TextSize = 30.000
-EvilHub.TextWrapped = true
-Evilhub.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet(("https://raw.githubusercontent.com/Natthawat69/EvilHub-FREE/main/Script.lua"),true))()
-end)
-
 MheeHub.Name = "Mhee Hub"
 MheeHub.Parent = _1stFloor
 MheeHub.BackgroundColor3 = Color3.fromRGB(0, 85, 255)
 MheeHub.BorderColor3 = Color3.fromRGB(85, 85, 255)
-MheeHub.Position = UDim2.new(0.355217874, 0, 1.23039222, 0)
+MheeHub.Position = UDim2.new(0.695726633, 0, 1.23039222, 0)
 MheeHub.Size = UDim2.new(0, 146, 0, 70)
 MheeHub.Font = Enum.Font.Roboto
 MheeHub.Text = "Mhee Hub"
 MheeHub.TextColor3 = Color3.fromRGB(85, 255, 127)
 MheeHub.TextSize = 30.000
 MheeHub.TextWrapped = true
-MheeHub.MouseButton1Down:connect(function ()
+MheeHub.MouseButton1Down:connect(function()
 	loadstring(game:HttpGet(("https://raw.githubusercontent.com/BunnySalf/Hentai/main/MHEEHUB"),true))()
+end)
+
+EvilHub.Name = "EvilHub"
+EvilHub.Parent = _1stFloor
+EvilHub.BackgroundColor3 = Color3.fromRGB(0, 85, 255)
+EvilHub.BorderColor3 = Color3.fromRGB(85, 85, 255)
+EvilHub.Position = UDim2.new(0.355217874, 0, 1.23039222, 0)
+EvilHub.Size = UDim2.new(0, 146, 0, 70)
+EvilHub.Font = Enum.Font.Roboto
+EvilHub.Text = "Evil Hub"
+EvilHub.TextColor3 = Color3.fromRGB(85, 255, 127)
+EvilHub.TextSize = 30.000
+EvilHub.TextWrapped = true
+EvilHub.MouseButton1Down:connect(function ()
+	loadstring(game:HttpGet(("https://raw.githubusercontent.com/Natthawat69/EvilHub-FREE/main/Script.lua"),true))()
 end)
 
 None6.Name = "None6"
@@ -159,7 +158,7 @@ PolarHub.Text = "Polar Hub"
 PolarHub.TextColor3 = Color3.fromRGB(85, 255, 127)
 PolarHub.TextSize = 30.000
 PolarHub.TextWrapped = true
-PolarHub.MouseButton1Down:connect(function ()
+PolarHub.MouseButton1Down:connect(function()
 	loadstring(game:HttpGet(("https://pastebin.com/y4V5Y5DM"),true))()
 end)
 
@@ -182,17 +181,17 @@ UpdateLog.Position = UDim2.new(0.708528697, 0, -0.277748406, 0)
 UpdateLog.Size = UDim2.new(0, 414, 0, 399)
 UpdateLog.Visible = false
 
-Name_2.Name = "Name"
-Name_2.Parent = UpdateLog
-Name_2.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-Name_2.Position = UDim2.new(0.258454114, 0, 0, 0)
-Name_2.Size = UDim2.new(0, 200, 0, 50)
-Name_2.Font = Enum.Font.Cartoon
-Name_2.Text = "Update Logs"
-Name_2.TextColor3 = Color3.fromRGB(255, 46, 137)
-Name_2.TextScaled = true
-Name_2.TextSize = 14.000
-Name_2.TextWrapped = true
+Name.Name = "Name"
+Name.Parent = UpdateLog
+Name.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Name.Position = UDim2.new(0.258454114, 0, 0, 0)
+Name.Size = UDim2.new(0, 200, 0, 50)
+Name.Font = Enum.Font.Cartoon
+Name.Text = "Update Logs"
+Name.TextColor3 = Color3.fromRGB(255, 46, 137)
+Name.TextScaled = true
+Name.TextSize = 14.000
+Name.TextWrapped = true
 
 Close_2.Name = "Close"
 Close_2.Parent = UpdateLog
@@ -246,17 +245,17 @@ Credits.TextSize = 14.000
 Credits.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
 Credits.TextWrapped = true
 
-version.Name = "version"
-version.Parent = UpdateLog
-version.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-version.BackgroundTransparency = 1.000
-version.Position = UDim2.new(0.651237607, 0, 0.90476191, 0)
-version.Size = UDim2.new(0, 182, 0, 50)
-version.Font = Enum.Font.SourceSans
-version.Text = "Version: 2.0.0a"
-version.TextColor3 = Color3.fromRGB(255, 0, 127)
-version.TextSize = 20.000
-version.TextWrapped = true
+dversion.Name = "version"
+dversion.Parent = UpdateLog
+dversion.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+dversion.BackgroundTransparency = 1.000
+dversion.Position = UDim2.new(0.651237607, 0, 0.90476191, 0)
+dversion.Size = UDim2.new(0, 182, 0, 50)
+dversion.Font = Enum.Font.SourceSans
+dversion.Text = "Version: 2.0.0a"
+dversion.TextColor3 = Color3.fromRGB(255, 0, 127)
+dversion.TextSize = 20.000
+dversion.TextWrapped = true
 
 UpdateLogButton.Name = "UpdateLogButton"
 UpdateLogButton.Parent = main
@@ -284,7 +283,7 @@ Open.TextSize = 40.000
 
 -- Scripts:
 
-local function QAFAQ_fake_script() -- Close.LocalScript 
+local function HMNCFL_fake_script() -- Close.LocalScript 
 	local script = Instance.new('LocalScript', Close)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -292,8 +291,8 @@ local function QAFAQ_fake_script() -- Close.LocalScript
 	end)
 	
 end
-coroutine.wrap(QAFAQ_fake_script)()
-local function EHYLG_fake_script() -- UpdateLog.LocalScript 
+coroutine.wrap(HMNCFL_fake_script)()
+local function HFUEPSR_fake_script() -- UpdateLog.LocalScript 
 	local script = Instance.new('LocalScript', UpdateLog)
 
 	
@@ -304,8 +303,8 @@ local function EHYLG_fake_script() -- UpdateLog.LocalScript
 		updateLogFrame.Visible = false
 	end)
 end
-coroutine.wrap(EHYLG_fake_script)()
-local function APOTND_fake_script() -- main.LocalScript 
+coroutine.wrap(HFUEPSR_fake_script)()
+local function ZLGVPOX_fake_script() -- main.LocalScript 
 	local script = Instance.new('LocalScript', main)
 
 	local updateLogButton = script.Parent.UpdateLogButton
@@ -316,8 +315,8 @@ local function APOTND_fake_script() -- main.LocalScript
 		updateLogFrame.Visible = true
 	end)
 end
-coroutine.wrap(APOTND_fake_script)()
-local function QIXNZYP_fake_script() -- Open.LocalScript 
+coroutine.wrap(ZLGVPOX_fake_script)()
+local function VFBX_fake_script() -- Open.LocalScript 
 	local script = Instance.new('LocalScript', Open)
 
 	local main = script.Parent.Parent.main  -- change “Test” to the name of the frane
@@ -330,4 +329,4 @@ local function QIXNZYP_fake_script() -- Open.LocalScript
 	end)
 	
 end
-coroutine.wrap(QIXNZYP_fake_script)()
+coroutine.wrap(VFBX_fake_script)()
