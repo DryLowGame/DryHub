@@ -90,6 +90,9 @@ BkHax.Text = "BKHax Hub"
 BkHax.TextColor3 = Color3.fromRGB(85, 255, 127)
 BkHax.TextSize = 30.000
 BkHax.TextWrapped = true
+BkHax.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet(("https://raw.githubusercontent.com/koonpeatch/PeatEX/master/BKHAX/BKHAXHUB"),true))()
+end)
 
 EvilHub.Name = "Evil Hub"
 EvilHub.Parent = _1stFloor
@@ -98,22 +101,28 @@ EvilHub.BorderColor3 = Color3.fromRGB(85, 85, 255)
 EvilHub.Position = UDim2.new(0.695726633, 0, 1.23039222, 0)
 EvilHub.Size = UDim2.new(0, 146, 0, 70)
 EvilHub.Font = Enum.Font.Roboto
-EvilHub.Text = "Mhee Hub"
+EvilHub.Text = "Evil Hub"
 EvilHub.TextColor3 = Color3.fromRGB(85, 255, 127)
 EvilHub.TextSize = 30.000
 EvilHub.TextWrapped = true
+Evilhub.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet(("https://raw.githubusercontent.com/Natthawat69/EvilHub-FREE/main/Script.lua"),true))()
+end)
 
-Aimbot.Name = "Aimbot"
-Aimbot.Parent = _1stFloor
-Aimbot.BackgroundColor3 = Color3.fromRGB(0, 85, 255)
-Aimbot.BorderColor3 = Color3.fromRGB(85, 85, 255)
-Aimbot.Position = UDim2.new(0.355217874, 0, 1.23039222, 0)
-Aimbot.Size = UDim2.new(0, 146, 0, 70)
-Aimbot.Font = Enum.Font.Roboto
-Aimbot.Text = "Evil Hub"
-Aimbot.TextColor3 = Color3.fromRGB(85, 255, 127)
-Aimbot.TextSize = 30.000
-Aimbot.TextWrapped = true
+MheeHub.Name = "Mhee Hub"
+MheeHub.Parent = _1stFloor
+MheeHub.BackgroundColor3 = Color3.fromRGB(0, 85, 255)
+MheeHub.BorderColor3 = Color3.fromRGB(85, 85, 255)
+MheeHub.Position = UDim2.new(0.355217874, 0, 1.23039222, 0)
+MheeHub.Size = UDim2.new(0, 146, 0, 70)
+MheeHub.Font = Enum.Font.Roboto
+MheeHub.Text = "Mhee Hub"
+MheeHub.TextColor3 = Color3.fromRGB(85, 255, 127)
+MheeHub.TextSize = 30.000
+MheeHub.TextWrapped = true
+MheeHub.MouseButton1Down:connect(function ()
+	loadstring(game:HttpGet(("https://raw.githubusercontent.com/BunnySalf/Hentai/main/MHEEHUB"),true))()
+end)
 
 None6.Name = "None6"
 None6.Parent = _1stFloor
@@ -150,6 +159,9 @@ PolarHub.Text = "Polar Hub"
 PolarHub.TextColor3 = Color3.fromRGB(85, 255, 127)
 PolarHub.TextSize = 30.000
 PolarHub.TextWrapped = true
+PolarHub.MouseButton1Down:connect(function ()
+	loadstring(game:HttpGet(("https://pastebin.com/y4V5Y5DM"),true))()
+end)
 
 Close.Name = "Close"
 Close.Parent = main
